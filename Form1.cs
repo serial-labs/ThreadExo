@@ -158,7 +158,7 @@ namespace EventApp
 
             //------test de boucle avec attente pour voir si programme plante 
 
-            lequipe.InfoL1 += b3;
+            lequipe.InfoL1 += b3;//InfoL1 a un tableau de delegate
 
             lequipe.OnInfoL1(new InfoEventArgs("Sochaux bat Marseille 2:1"));
             //lequipe.OnInfoLdc(new InfoEventArgs("Barça une deuxieme remontada ??"));
