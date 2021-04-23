@@ -26,17 +26,17 @@ namespace JsonAppCons
             return champs.Count;
         }
 
-        public static int findIndexFAll<T>(this List<T> champs, T name)
+        public static int findIndexFAll<T>(this List<T> listElement, T element)
         {
-            for (int i = 0; i < champs.Count; i++)
+            for (int i = 0; i <listElement.Count; i++)
             {
-                if (champs[i].Equals(name))
+                if (listElement[i].Equals(element))
                 {
                     return i;
                 }
 
             }
-            return champs.Count;
+            return listElement.Count;
         }
 
     }
@@ -58,9 +58,17 @@ namespace JsonAppCons
 
     public class MesChamps
     {
-        string nom { get; set; }
-        int profondeur { get; set; }
-        int repetition { get; set; }
+        public string nom { get; set; }
+        public int profondeur { get; set; }
+        public int repetition { get; set; }
+
+        public override bool Equals(object other)
+        {
+            if (!(other is MesChamps))
+                return false;
+            return this.nom == ((MesChamps)other).nom;
+            
+        }
 
 
     }
@@ -85,27 +93,26 @@ namespace JsonAppCons
         }
 
 
-        public static  void findInProf(JToken rToken,int p=0)
+        public static  void findInProf(JToken Token, List<MesChamps> ch, int p=0)
         {
             
-            foreach(JToken orToken in rToken.Children())
+            string n = (Token is JProperty) ? (Token as JProperty).Name : "[Pas de nom]";
+            Console.WriteLine("dans fonction a la profondeur {0}");
+            foreach (JToken childToken in Token.Children())
             {
-                
-                foreach (JToken childORToken in orToken.Children())
+                if (!(childToken is JProperty)) continue;
+                string propName =((JProperty)childToken).Name;
+                int idx = ch.findIndexFAll<MesChamps>(new MesChamps() { nom = propName });
+                if (idx < ch.Count)
                 {
-                    
-                    if (!(childORToken is JProperty)) continue;
-
-                    
-                    JProperty jprop = childORToken.ToObject<JProperty>();
-                    Console.WriteLine("{0} est de profondeur {1}", jprop.Name, p);
-                    
-                    foreach(JToken childT in childORToken.Children())
-                    {
-                        if (!(childT is JArray)) continue;
-                        findInProf(childT, ++p);
-                    }
+                    ch[idx].repetition = ch[idx].repetition + 1;
                 }
+                else
+                {
+                    ch.Add(new MesChamps() { nom = propName, repetition = 1, profondeur = p + 1 });
+                }
+                
+                findInProf(childToken, ch,p+1);
             }
         }
 
@@ -113,6 +120,10 @@ namespace JsonAppCons
         
         static void Main(string[] args)
         {
+            MesChamps m = new MesChamps();
+            Object o = new Object();
+
+            Console.WriteLine(m.Equals(o));
             //int j = 0;
             //int resulAffec = (j=j+1);
             //Console.WriteLine(((resulAffec))); 
@@ -128,10 +139,13 @@ namespace JsonAppCons
 
             JObject jsonObj = JObject.Parse(File.ReadAllText(@"C:\Users\amega\source\repos\JsonAppCons\data.json"));
             
-            var champs= new List<string>();
-            int indexdeToto = champs.findIndexF("toto");
+            //var champs= new List<string>();
+            //int indexdeToto = champs.findIndexF("toto");
 
             var nbChamps = new List<int>();
+
+            var champs = new List<MesChamps>();
+            
             //Console.WriteLine(jsonObj.ContainsKey("rows"));
             //Console.WriteLine(jsonObj.GetValue("rows").Children().Count());
             Console.WriteLine(jsonObj.GetValue("rows").Children().Count());
@@ -139,7 +153,7 @@ namespace JsonAppCons
             //Console.WriteLine(jsonObj.First.First.Children().ElementAt(0).Children());
             //Console.WriteLine(jsonObj.First.First.Children().ElementAt(1));
             //Console.WriteLine(jsonObj.First.First.Children().ElementAt(1).Ancestors().ToString());
-            
+            findInProf(jsonObj, champs);
             if (jsonObj.ContainsKey("rows"))
             {
                 JToken rowsToken = jsonObj.GetValue("rows");
@@ -169,7 +183,7 @@ namespace JsonAppCons
                     //    }
                     //    //Console.WriteLine("\n");
                     //}
-                    findInProf(rowsToken);
+                    findInProf(rowsToken,champs);
                 }
                 else
                 {
