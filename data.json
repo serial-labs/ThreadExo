@@ -1,0 +1,121 @@
+{
+    
+    "author":  "ruben",
+    "rows": [
+        {
+            "PartitionKey": "<a href=\"/TableReader?table=Activities&partition=00000000-0000-0000-0000-000000000000\">00000000-0000-0000-0000-000000000000</a>",
+            "RowKey": "2517844983945723290_5e115fe26de84f07a68c843e9d7f9f83",
+            "Timestamp": "2021-04-07T13:33:25.4590164+00:00",
+            "CreatedBy": "MyBlazon.vNext.ActivityManager.CreateActivity(5.1.2-beta)",
+            "Data": "{\"Value1\":\"22\",\"Value2\":\"55\",\"Value3\":\"40\",\"RecipientType\":\"Me\",\"SessionId\":\"4nsb5wqxbfd5adqh5mrltxly\",\"TotalStartedDemands\":1,\"TotalCompletedDemands\":1,\"IsUserAuthenticated\":false,\"UserName\":\"\",\"UserId\":\"00000000-0000-0000-0000-000000000000\",\"ApplicationMode\":\"WebApplication\"}",
+            "DateActivityUtc": "2021-04-07T13:33:25.4276709Z",
+            "DateCreatedUtc": "2021-04-07T13:33:25.4276709Z",
+            "DateUpdatedUtc": "2021-04-07T13:33:25.4276709Z",
+            "ElapsedMilliseconds": 20,
+            "HostName": "WTF?",
+            "IpAddress": 1217027058,
+            "LocalIp": "WTF?",
+            "Topics": "/coatofarms/new/completed",
+            "UpdatedBy": "MyBlazon.vNext.ActivityManager.CreateActivity(5.1.2-beta)",
+            "UserId": "00000000-0000-0000-0000-000000000000",
+            "rows": [
+                {
+                    "nom": "toto",
+                    "prenom": "to"
+                },
+                {
+                    "nom": "tata",
+                    "prenom": "ta"
+                },
+                {
+                    "nom": "titi",
+                    "prenom": "ti",
+                    "autre": [
+                        {
+                            "t1": "t1",
+                            "t2": "t2"
+                        },
+                        {
+                            "t3": "t3",
+                            "t4": "t4"
+                        }
+                    ]
+                },
+                {
+                    "nom": "tutu",
+                    "prenom": "tu"
+                }
+            ]
+        },
+        {
+            "PartitionKey": "<a href=\"/TableReader?table=Activities&partition=00000000-0000-0000-0000-000000000000\">00000000-0000-0000-0000-000000000000</a>",
+            "RowKey": "2517844984139474107_eb4b417ce80e45cd879d33f1b138ca29",
+            "Timestamp": "2021-04-07T13:33:06.0843524+00:00",
+            "CreatedBy": "MyBlazon.vNext.ActivityManager.CreateActivity(5.1.2-beta)",
+            "Data": "{\"SharedKey\":\"be921798\",\"CoatOfArmsId\":\"2517844985027404572_cd5ce93f52334403ad0d924c8be9835b\",\"OwnerId\":\"cff0fccc-c9a2-4b6d-9c47-8d36a581c7bd\",\"Owner\":\"Thaerall\",\"SessionId\":\"d0mh0l1rwlgpqkkeuf5z5zpu\",\"TotalStartedDemands\":0,\"TotalCompletedDemands\":0,\"IsUserAuthenticated\":false,\"UserName\":\"\",\"UserId\":\"00000000-0000-0000-0000-000000000000\",\"ApplicationMode\":\"WebApplication\"}",
+            "DateActivityUtc": "2021-04-07T13:33:06.0525892Z",
+            "DateCreatedUtc": "2021-04-07T13:33:06.0525892Z",
+            "DateUpdatedUtc": "2021-04-07T13:33:06.0525892Z",
+            "ElapsedMilliseconds": 70,
+            "HostName": "WTF?",
+            "IpAddress": 520978198,
+            "LocalIp": "WTF?",
+            "Topics": "/coatofarms/friendcoatofarms",
+            "UpdatedBy": "MyBlazon.vNext.ActivityManager.CreateActivity(5.1.2-beta)",
+            "UserId": "00000000-0000-0000-0000-000000000000"
+        },
+        {
+            "PartitionKey": "<a href=\"/TableReader?table=Activities&partition=00000000-0000-0000-0000-000000000000\">00000000-0000-0000-0000-000000000000</a>",
+            "RowKey": "2517844984154964416_49ab075afa7a494cbf789aa8b54ffc5d",
+            "Timestamp": "2021-04-07T13:33:04.5512753+00:00",
+            "CreatedBy": "MyBlazon.vNext.ActivityManager.CreateActivity(5.1.2-beta)",
+            "Data": "{\"SharedKey\":\"be921798\",\"CoatOfArmsId\":\"2517844985027404572_cd5ce93f52334403ad0d924c8be9835b\",\"OwnerId\":\"cff0fccc-c9a2-4b6d-9c47-8d36a581c7bd\",\"Owner\":\"Thaerall\",\"SessionId\":\"0wuncms4iejbiw0lxwxdh2hm\",\"TotalStartedDemands\":0,\"TotalCompletedDemands\":0,\"IsUserAuthenticated\":false,\"UserName\":\"\",\"UserId\":\"00000000-0000-0000-0000-000000000000\",\"ApplicationMode\":\"WebApplication\"}",
+            "DateActivityUtc": "2021-04-07T13:33:04.5035583Z",
+            "DateCreatedUtc": "2021-04-07T13:33:04.5035583Z",
+            "DateUpdatedUtc": "2021-04-07T13:33:04.5035583Z",
+            "ElapsedMilliseconds": 69,
+            "HostName": "WTF?",
+            "IpAddress": 520978205,
+            "LocalIp": "WTF?",
+            "Topics": "/coatofarms/friendcoatofarms"
+        },
+        {
+            "PartitionKey": "<a href=\"/TableReader?table=Activities&partition=00000000-0000-0000-0000-000000000000\">00000000-0000-0000-0000-000000000000</a>",
+            "RowKey": "2517844984440850624_32a3d520932d44c7bde43546499f0763",
+            "Timestamp": "2021-04-07T13:32:36.0201503+00:00",
+            "CreatedBy": "MyBlazon.vNext.ActivityManager.CreateActivity(5.1.2-beta)",
+            "Data": "{\"Value1\":\"22\",\"Value2\":\"55\",\"Value3\":\"40\",\"RecipientType\":\"Me\",\"SessionId\":\"4nsb5wqxbfd5adqh5mrltxly\",\"TotalStartedDemands\":1,\"TotalCompletedDemands\":0,\"IsUserAuthenticated\":false,\"UserName\":\"\",\"UserId\":\"00000000-0000-0000-0000-000000000000\",\"ApplicationMode\":\"WebApplication\"}",
+            "DateActivityUtc": "2021-04-07T13:32:35.9149375Z",
+            "DateCreatedUtc": "2021-04-07T13:32:35.9149375Z",
+            "DateUpdatedUtc": "2021-04-07T13:32:35.9149375Z",
+            "ElapsedMilliseconds": 230,
+            "HostName": "WTF?",
+            "IpAddress": 1217027058,
+            "LocalIp": "WTF?",
+            "Topics": "/coatofarms/new/started",
+            "UpdatedBy": "MyBlazon.vNext.ActivityManager.CreateActivity(5.1.2-beta)",
+            "UserId": "00000000-0000-0000-0000-000000000000",
+            "toto": "moki"
+
+
+        },
+        {
+            "PartitionKey": "<a href=\"/TableReader?table=Activities&partition=00000000-0000-0000-0000-000000000000\">00000000-0000-0000-0000-000000000000</a>",
+            "RowKey": "2517844984440850624_32a3d520932d44c7bde43546499f0763",
+            "Timestamp": "2021-04-07T13:32:36.0201503+00:00",
+            "HostName": "WTF?",
+            "IpAddress": 1217027058,
+            "LocalIp": "WTF?",
+            "Topics": "/coatofarms/new/started",
+            "UpdatedBy": "MyBlazon.vNext.ActivityManager.CreateActivity(5.1.2-beta)",
+            "UserId": "00000000-0000-0000-0000-000000000000",
+            "toto": "moki",
+            "valuex": "fff"
+
+
+        }
+
+    ]
+
+
+}
